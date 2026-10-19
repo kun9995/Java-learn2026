@@ -2,10 +2,6 @@ package p02.eve;
 
 import java.util.Scanner;
 
-public class ex9 package p02;
-
-import java.util.Scanner;  // 使用Scanner必须导入这个包
-
 /**
  * Java 输入输出知识汇总 —— 课堂笔记 + 示例代码
  *
@@ -14,7 +10,7 @@ import java.util.Scanner;  // 使用Scanner必须导入这个包
  * 三、输入（Scanner）
  * 四、常见问题与注意事项
  */
-public class IO_KnowledgeSummary {
+public class ex9 {
 
     public static void main(String[] args) {
 
@@ -65,7 +61,8 @@ public class IO_KnowledgeSummary {
         // "x+y=" + x + y  →  会输出 "x+y=35"（字符串拼接）
         // "x+y=" + (x + y) →  会输出 "x+y=8"（先算再拼）
 
-        System.out.println("x * y = " + x * y);  // ❌ 编译错误！"x * y=" 是String，不能和int做乘法
+        // 反例（编译错误，仅作演示，已注释）："x * y=" 是String，不能和int做乘法
+        // System.out.println("x * y = " + x * y);
         System.out.println("x * y = " + (x * y)); // ✅ 正确写法，加括号
 
         // ---------- 1.5 转义字符一览 ----------
@@ -101,6 +98,8 @@ public class IO_KnowledgeSummary {
         System.out.println("你输入的单词是：" + word);
 
         // ---------- 3.5 读取一整行（含空格）：nextLine() ----------
+        // ⚠️ nextDouble()后接nextLine()要先消费残留换行符
+        scanner.nextLine();
         System.out.print("请输入一整句话：");
         String line = scanner.nextLine();   // 读取直到回车换行的全部内容
         System.out.println("你输入的句子是：" + line);
@@ -194,5 +193,4 @@ public class IO_KnowledgeSummary {
 
         sc.close();
     }
-}{
 }
