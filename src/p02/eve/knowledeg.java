@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 三、输入（Scanner）
  * 四、常见问题与注意事项
  */
-public class ex9 {
+public class knowledeg {
 
     public static void main(String[] args) {
 
@@ -190,7 +190,5 @@ public class ex9 {
         System.out.printf("姓名：%s%n", studentName);
         System.out.printf("数学：%.1f  英语：%.1f  平均：%.2f%n", mathScore, englishScore, avg);
         System.out.printf("等级：%s%n", avg >= 90 ? "优秀" : (avg >= 60 ? "及格" : "不及格"));
-
-        sc.close();
     }
 }
