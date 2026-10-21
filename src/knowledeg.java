@@ -1,5 +1,3 @@
-package p02.eve;
-
 import java.util.Scanner;
 
 /**
