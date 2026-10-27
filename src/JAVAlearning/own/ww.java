@@ -1,16 +1,14 @@
 package JAVAlearning.own;
 
-public class ww
-
 /**
  * 任务数据模型：每条任务包含内容、提醒时间和完成状态。
  */
- {
+public class ww {
     private String content;     // 任务内容
     private String remindTime;  // 提醒时间，格式 "HH:mm"；为空表示不提醒
     private boolean done;       // 是否已完成
 
-    public Task(String content, String remindTime, boolean done) {
+    public ww(String content, String remindTime, boolean done) {
         this.content = content;
         this.remindTime = remindTime;
         this.done = done;
@@ -46,17 +44,6 @@ public class ww
     public boolean shouldRemind(String nowHHmm) {
         return remindTime != null && !remindTime.isEmpty()
                 && remindTime.equals(nowHHmm) && !done;
-    }
-
-    /**
-     * 列表展示用的文本：已完成的任务加一个勾选标记。
-     */
-    @Override
-    public String toString() {
-        String mark = done ? "[√] " : "[ ] ";
-        String time = (remindTime == null || remindTime.isEmpty())
-                ? "" : " (" + remindTime + ")";
-        return mark + content + time;
     }
 }
 
