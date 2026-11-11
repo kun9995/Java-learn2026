@@ -1,8 +1,21 @@
 package p00;
 
+import java.util.Scanner;
+
 public class Test1 {
+
     public static void main(String[] args) {
-        System.out.println("好好学习，天天向上");
-        System.out.println("No pain,no gain");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
+            System.out.println(sum);
+
+        }
     }
 }
